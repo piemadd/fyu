@@ -1,6 +1,8 @@
 # FYU
 Do your users take your website for granted? Do want to make them using your website living hell? Look no further, F.Y.U. is here! Oh yeah, FYU stands for something 👀.
 
+(PS you might recognize my name from my [url lengthener](https://ax56.pro) which went viral a few weeks bac)
+
 ## Getting the script
 Getting the script is super easy, as it is hosted with jsDelivr (seriously that site is awesome!). All you need to do is put this at the end of the `body` of your site:
 ```html
