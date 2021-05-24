@@ -9,9 +9,12 @@ Getting the script is super easy, as it is hosted with jsDelivr (seriously that 
 <script src="https://cdn.jsdelivr.net/npm/fyu@1.1.0/fyu.min.js"></script>
 ```
 
+Note: You can technically put it anywhere, but this script is pretty low priority to load.
+
 ## Activating the Script
 Actually using the script is really easy, but you might not want to use every function, so here's a litte guide:
 
+- `loadElems()` - This loads all of the elements currently on the page. You *need* to run this before you run any of the functions below (with the exception of `makeithell()`) or else it ***will not work***.
 - `makeithell()` - You have no care for the world. Every knob at the max.
 - `shiftHorizontalRandom()` - Shifts each element randomly left or right 4 times per second
 - `shiftVerticalRandom()` - Shifts each element randomly up or down 4 times per second

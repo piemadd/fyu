@@ -8,12 +8,7 @@ function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
-var elems = Array.from(document.body.getElementsByTagName("*"));
-for (elem in elems) {
-	if (elems[elem].classList.contains('dontNuke')) {
-		delete elems[elem];
-	}
-}
+var elems;
 
 async function shiftHorizontalRandom() { // Shifts each element randomly left or right 4 times per second
 	
@@ -107,7 +102,17 @@ async function opacityRandom() { // Changes every element's opacity every 5 seco
 	};
 };
 
+function loadElems() {
+	elems = Array.from(document.body.getElementsByTagName("*"));
+	for (elem in elems) {
+		if (elems[elem].classList.contains('dontNuke')) {
+			delete elems[elem];
+		};
+	};
+}
+
 async function makeItHell() {
+	loadElems();
 	shiftRandom();
 	runAway();
 	colorsRandom();
