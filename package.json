@@ -1,6 +1,6 @@
 {
   "name": "fyu",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Do your users take your website for granted? Do want to make them using your website living hell? Look no further, F.Y.U. is here!",
   "main": "fyu.js",
   "scripts": {
@@ -10,5 +10,17 @@
   "license": "GNU AGPLv3",
   "dependencies": {
     "terser": "^5.7.0"
-  }
+  },
+  "keywords": [
+    "fyourusers",
+    "fyou",
+    "fyu",
+    "screwyourusers",
+    "userssuck",
+    "frickyourusers",
+    "user-experience",
+    "web-tools",
+    "site-framework",
+    "frameworks"
+  ]
 }
