@@ -6,7 +6,7 @@ Do your users take your website for granted? Do want to make them using your web
 ## Getting the script
 Getting the script is super easy, as it is hosted with jsDelivr (seriously that site is awesome!). All you need to do is put this at the end of the `body` of your site:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/fyu@latest/fyu.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fyu@1/fyu.min.js"></script>
 ```
 
 ## Activating the Script
@@ -35,4 +35,4 @@ Not Affected:
 ```
 
 ## Contributing
-If you would like to add your own nuking functions to this script, simply make a pr with the ***asyncronous*** function added to `fyu.js` and the call to the said function inside of `makeItHell()`. Don't worry about minifying `fyu.js`, as jsDelivr does that for us. If the function(s) you add aren't asyncronous, I'll comment on your pr to make the change. The reason we want to do this is to not interfere with any other scripts or functions within this script.
+If you would like to add your own nuking functions to this script, simply make a pr with the ***asyncronous*** function added to `fyu.js` and the call to the said function inside of `makeItHell()`. Don't worry about minifying `fyu.js`, as I'll end up doing that myself. If the function(s) you add aren't asyncronous, I'll comment on your pr to make the change. The reason we want to do this is to not interfere with any other scripts or functions within this script.
