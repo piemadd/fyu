@@ -1,12 +1,12 @@
 # FYU
-Do your users take your website for granted? Do want to make them using your website living hell? Look no further, F.Y.U. is here! Oh yeah, FYU stands for something 👀.
+Do your users take your website for granted? Do want to make using your website living hell? Look no further, F.Y.U. is here! Oh yeah, FYU stands for something 👀.
 
 (PS you might recognize my name from my [url lengthener](https://ax56.pro) which went viral a few weeks back)
 
 ## Getting the script
 Getting the script is super easy, as it is hosted with jsDelivr (seriously that site is awesome!). All you need to do is put this at the end of the `body` of your site:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/fyu@1.1.3/fyu.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fyu/fyu.min.js"></script>
 ```
 
 Note: You can technically put it anywhere, but this script is pretty low priority to load.

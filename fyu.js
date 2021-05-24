@@ -103,7 +103,7 @@ async function opacityRandom() { // Changes every element's opacity every 5 seco
 };
 
 function loadElems() {
-	elems = Array.from(document.body.getElementsByTagName("*"));
+	elems = Array.from(document.getElementsByTagName("*"));
 	for (elem in elems) {
 		if (elems[elem].classList.contains('dontNuke')) {
 			delete elems[elem];
