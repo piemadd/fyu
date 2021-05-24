@@ -6,7 +6,7 @@ Do your users take your website for granted? Do want to make them using your web
 ## Getting the script
 Getting the script is super easy, as it is hosted with jsDelivr (seriously that site is awesome!). All you need to do is put this at the end of the `body` of your site:
 ```html
-<script src="https://cdn.jsdelivr.net/npm/fyu@1.1.2/fyu.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fyu@1.1.3/fyu.min.js"></script>
 ```
 
 Note: You can technically put it anywhere, but this script is pretty low priority to load.

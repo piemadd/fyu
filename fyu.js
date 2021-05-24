@@ -15,7 +15,7 @@ async function shiftHorizontalRandom() { // Shifts each element randomly left or
 	while (true) {
 		for (elem in elems) {
 			elems[elem].style.transform = "none";
-			elems[elem].style.transform = `translateX(${getRandomInt(-200, 100)}px)`;
+			elems[elem].style.transform = `translateX(${getRandomInt(-250, 100)}px)`;
 		};
 		await sleep(250);
 	};
@@ -26,7 +26,7 @@ async function shiftVerticalRandom() { // Shifts each element randomly up or dow
 	while (true) {
 		for (elem in elems) {
 			elems[elem].style.transform = "none";
-			elems[elem].style.transform = `translateY(${getRandomInt(-200, 100)}px)`;
+			elems[elem].style.transform = `translateY(${getRandomInt(-250, 100)}px)`;
 		};
 		await sleep(250);
 	};
@@ -59,7 +59,7 @@ async function runAway() { // Makes every element "run away" from the cursor whe
 
 async function moveFromMouse(e) { // The actual funtion run by runAway()
 	e.target.style.transform = "none";
-	e.target.style.transform = `translate(${getRandomInt(-100, 50)}px, ${getRandomInt(-100, 50)}px)`;
+	e.target.style.transform = `translate(${getRandomInt(-150, 50)}px, ${getRandomInt(-150, 50)}px)`;
 }
 
 async function colorsRandom() { // Changes every element's color and background color every 2.5 seconds
