@@ -8,8 +8,15 @@ function getRandomInt(min, max) {
 	return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
+var elems = Array.from(document.body.getElementsByTagName("*"));
+for (elem in elems) {
+	if (elems[elem].classList.contains('dontNuke')) {
+		delete elems[elem];
+	}
+}
+
 async function shiftHorizontalRandom() { // Shifts each element randomly left or right 4 times per second
-	var elems = Array.from(document.body.getElementsByTagName("*"));
+	
 	while (true) {
 		for (elem in elems) {
 			elems[elem].style.transform = "none";
@@ -20,7 +27,7 @@ async function shiftHorizontalRandom() { // Shifts each element randomly left or
 };
 
 async function shiftVerticalRandom() { // Shifts each element randomly up or down 4 times per second
-	var elems = Array.from(document.body.getElementsByTagName("*"));
+	
 	while (true) {
 		for (elem in elems) {
 			elems[elem].style.transform = "none";
@@ -36,7 +43,7 @@ async function shiftRandom() { // Shifts each element randomly around the screen
 };
 
 async function rotateRandom() { // Rotates each element randomly 4 times per second
-	var elems = Array.from(document.body.getElementsByTagName("*"));
+	
 	while (true) {
 		for (elem in elems) {
 			elems[elem].style.transform = `rotate(${getRandomInt(0, 359)}deg)`;
@@ -46,7 +53,7 @@ async function rotateRandom() { // Rotates each element randomly 4 times per sec
 };
 
 async function runAway() { // Makes every element "run away" from the cursor when hovered over
-	var elems = Array.from(document.body.getElementsByTagName("*"));
+	
 	for (elem in elems) {
 		elems[elem].addEventListener('mouseover', moveFromMouse);
 	};
@@ -61,7 +68,7 @@ async function moveFromMouse(e) { // The actual funtion run by runAway()
 }
 
 async function colorsRandom() { // Changes every element's color and background color every 2.5 seconds
-	var elems = Array.from(document.body.getElementsByTagName("*"));
+	
 	while (true) {
 		for (elem in elems) {
 			let currentBack = elems[elem].style.backgroundColor;
@@ -82,17 +89,12 @@ async function colorsRandom() { // Changes every element's color and background 
 };
 
 async function opacityRandom() { // Changes every element's opacity every 5 seconds
-	var elems = Array.from(document.body.getElementsByTagName("*"));
 	while (true) {
 		for (elem in elems) {
-			let opacity = Math.random() * 2; // yes i know this is out of range just shut up i want things to be more opaque than not more often
-			if (elems[elem].classList.contains("dontNuke")) {
-				opacity = 1;
-			}
 			elems[elem].animate([
 				// keyframes
 				{ opacity: 1 },
-				{ opacity: opacity }, 
+				{ opacity: Math.random() * 2 }, // yes i know this is out of range just shut up i want things to be more opaque than not more often
 				{ opacity: 1 }
 				], {
 				// timing options
