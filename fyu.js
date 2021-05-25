@@ -1,8 +1,8 @@
-function sleep(ms) {
+export function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function getRandomInt(min, max) {
+export function getRandomInt(min, max) {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 	return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
@@ -10,7 +10,7 @@ function getRandomInt(min, max) {
 
 var elems;
 
-async function shiftHorizontalRandom() { // Shifts each element randomly left or right 4 times per second
+export async function shiftHorizontalRandom() { // Shifts each element randomly left or right 4 times per second
 	
 	while (true) {
 		for (elem in elems) {
@@ -21,7 +21,7 @@ async function shiftHorizontalRandom() { // Shifts each element randomly left or
 	};
 };
 
-async function shiftVerticalRandom() { // Shifts each element randomly up or down 4 times per second
+export async function shiftVerticalRandom() { // Shifts each element randomly up or down 4 times per second
 	
 	while (true) {
 		for (elem in elems) {
@@ -32,12 +32,12 @@ async function shiftVerticalRandom() { // Shifts each element randomly up or dow
 	};
 };
 
-async function shiftRandom() { // Shifts each element randomly around the screen 4 times per second
+export async function shiftRandom() { // Shifts each element randomly around the screen 4 times per second
 	shiftHorizontalRandom();
 	shiftVerticalRandom();
 };
 
-async function rotateRandom() { // Rotates each element randomly 4 times per second
+export async function rotateRandom() { // Rotates each element randomly 4 times per second
 	
 	while (true) {
 		for (elem in elems) {
@@ -47,7 +47,7 @@ async function rotateRandom() { // Rotates each element randomly 4 times per sec
 	};
 };
 
-async function runAway() { // Makes every element "run away" from the cursor when hovered over
+export async function runAway() { // Makes every element "run away" from the cursor when hovered over
 	
 	for (elem in elems) {
 		elems[elem].addEventListener('mouseover', moveFromMouse);
@@ -57,12 +57,12 @@ async function runAway() { // Makes every element "run away" from the cursor whe
 	};
 };
 
-async function moveFromMouse(e) { // The actual funtion run by runAway()
+export async function moveFromMouse(e) { // The actual funtion run by runAway()
 	e.target.style.transform = "none";
 	e.target.style.transform = `translate(${getRandomInt(-150, 50)}px, ${getRandomInt(-150, 50)}px)`;
 }
 
-async function colorsRandom() { // Changes every element's color and background color every 2.5 seconds
+export async function colorsRandom() { // Changes every element's color and background color every 2.5 seconds
 	
 	while (true) {
 		for (elem in elems) {
@@ -83,7 +83,7 @@ async function colorsRandom() { // Changes every element's color and background 
 	};
 };
 
-async function opacityRandom() { // Changes every element's opacity every 5 seconds
+export async function opacityRandom() { // Changes every element's opacity every 5 seconds
 	while (true) {
 		for (elem in elems) {
 			elems[elem].animate([
@@ -111,7 +111,7 @@ function loadElems() {
 	};
 }
 
-async function makeItHell() {
+export async function makeItHell() {
 	loadElems();
 	shiftRandom();
 	runAway();
